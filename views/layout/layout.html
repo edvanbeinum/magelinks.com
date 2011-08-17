@@ -1,0 +1,98 @@
+<!doctype html>
+
+<!--[if lt IE 7]>
+<html class="no-js ie6 oldie" lang=en><![endif]-->
+<!--[if IE 7]>
+<html class="no-js ie7 oldie" lang=en><![endif]-->
+<!--[if IE 8]>
+<html class="no-js ie8 oldie" lang=en><![endif]-->
+
+<!--[if gt IE 8]><!-->
+<html class=no-js lang=en> <!--<![endif]-->
+<head>
+    <meta charset=utf-8>
+
+
+    <meta http-equiv=X-UA-Compatible content="IE=edge,chrome=1">
+
+    <meta name=description content="">
+    <meta name=author content="">
+
+
+    <meta name=viewport content="width=device-width,initial-scale=1">
+
+    <link href='http://fonts.googleapis.com/css?family=Vollkorn:400' rel='stylesheet' type='text/css'>
+    <link rel=stylesheet href='/css/style.css?2'>
+
+
+    <script src="/js/libs/modernizr-2.0.6.min.js"></script>
+
+    <title>Magelinks</title>
+</head>
+
+<body>
+
+    <div class="main layout-978">
+        <div class="row">
+            <div id="info-message" class="col12">
+                <p>
+                    <span>This site uses <a href="http://zootool.com">Zootool</a> which is great but the API bit sketchy when dealing with Tags - it seems to send the auto-suggested tags along with the actual tags. While I fix this you may find tags that don't actually have any links associated with them.</span>
+                </p>
+            </div>
+        </div>
+        <header class="layout-978 clearfix">
+            <div class="row">
+                <div class="col6">
+                    <h1><a href="/">Magelinks</a></h1>
+
+                    <p>A collection of Magento articles that don't suck.</p>
+                </div>
+
+                <div class="col6">
+                    <img id="info-button" src="/img/info.png" width="25" height="25" alt="Info"/>
+                </div>
+            </div>
+            <div class="row-end"></div>
+        </header>
+        <article class="layout-978">
+
+            {% block content %}{% endblock %}
+
+        </article>
+    </div>
+<div class="push"></div>
+    <footer class="layout-978">
+        <p>Gathered together by <a href="http://twitter.com/edvanbeinum">Ed van Beinum</a></p>
+    </footer>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+<script>window.jQuery || document.write(
+        '<script src="/js/libs/jquery-1.6.2.min.js"><\/script>'
+);</script>
+
+
+<script defer src='/js/script.js'></script>
+
+
+<script>window._gaq = [
+    ["_setAccount","UAXXXXXXXX1"],
+    ["_trackPageview"],
+    ["_trackPageLoadTime"]
+];
+Modernizr.load(
+        {load:("https:" == location.protocol ? "//ssl" : "//www") + ".google-analytics.com/ga.js"}
+);</script>
+
+
+<!--[if lt IE 7 ]>
+<script defer src="//ajax.googleapis.com/ajax/libs/chrome-frame/1.0.3/CFInstall.min.js"></script>
+<script defer>window.attachEvent(
+        "onload", function()
+        {
+            CFInstall.check(
+                    {mode:"overlay"}
+            )
+        }
+);</script><![endif]-->
+
+</body>
+</html>

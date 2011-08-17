@@ -1,0 +1,13 @@
+{% extends "layout/layout.html" %}
+
+{% block content %}
+
+{% if flash.error %}
+<div class="col12 error">
+    <p>{{ flash.error }}</p>
+</div>
+{% endif %}
+
+{% include 'partials/grid.html' %}
+
+{% endblock content %}
