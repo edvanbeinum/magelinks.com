@@ -8,7 +8,6 @@ defined('APPLICATION_PATH')
 defined('APPLICATION_ENV')
 || define('APPLICATION_ENV', (getenv('APPLICATION_ENV') ? getenv('APPLICATION_ENV') : 'development'));
 
-$_ENV['SLIM_MODE'] = APPLICATION_ENV;
 
 // Ensure lib directory is on include_path
 set_include_path(APPLICATION_PATH . '/lib/' . PATH_SEPARATOR . get_include_path());
@@ -20,7 +19,11 @@ require_once 'ZootoolGatePHP/src/ZootoolGatePHP.php';
 
 
 $slim = new Slim(
-    array('view' => new TwigView, 'templates.path' => APPLICATION_PATH . '/views', 'cookies.encrypt' => false, 'session.handler' => null)
+    array(
+         'view' => new TwigView,
+         'templates.path' => APPLICATION_PATH . '/views', 
+         'session.handler' => null
+    )
 );
 
 $slim->configureMode(
@@ -51,9 +54,8 @@ $slim->configureMode(
 );
 
 
-
 $zoogate = new ZootoolGatePHP();
-$zoogate->setApikey('XXX');
+$zoogate->setApikey('a5727fdf27aeee914b33c79acb8feda1');
 $zoogate->setResultFormat('object');
 
 
@@ -67,7 +69,7 @@ $slim->get('/', function() use ($slim, $zoogate)
 $slim->get('/:tag/', function ($tag) use ($slim, $zoogate)
     {
         $items = $zoogate->get('users', 'items', array('username' => 'edvanbeinum', 'tag' => $tag));
-        if( ! $items ) {
+        if (!$items) {
             $slim->flash('error', 'Sorry dear, we don\'t have any links that are tagged with "' . $tag . '"');
             $slim->redirect('/');
         }

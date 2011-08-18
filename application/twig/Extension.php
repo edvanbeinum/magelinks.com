@@ -39,7 +39,7 @@ class Magelinks_Twig_Extension extends Twig_Extension
      * @param boolean $preserve_words enable or disable the preservation of words while limiting
      * @return string
      */
-    public static function limitChars($str, $limit = 100, $end_char = NULL, $preserve_words = FALSE)
+    public function limitChars($str, $limit = 100, $end_char = NULL, $preserve_words = FALSE)
     {
         $end_char = ($end_char === NULL) ? '…' : $end_char;
 

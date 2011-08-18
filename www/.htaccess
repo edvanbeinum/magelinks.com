@@ -523,6 +523,5 @@
                                     php_value session.cookie_httponly true
                                     </IfModule>
 
-                                    # Turn on XHProf
-                                    #php_value auto_prepend_file /mnt/hgfs/ubuntuhost/xhprof/www/xhprof_lib/utils/header.php
-                                    #php_value auto_append_file /mnt/hgfs/ubuntuhost/xhprof/www/xhprof_lib/utils/footer.php
+
+                                    setEnv APPLICATION_ENV production
