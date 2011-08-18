@@ -482,8 +482,10 @@ body {
 html, body {height: 100%;}
 
 .main {
+	min-height: 100%;
+	height: auto !important;
 	height: 100%;
-	margin: 0 auto -61px; /* the bottom margin is the negative value of the footer's height */
+	margin: 0 auto -121px; /* the bottom margin is the negative value of the footer's height */
 }
 
 
@@ -537,6 +539,10 @@ footer{
     border-top: 1px dashed #d33682;
 	
 	clear:both;
+}
+
+.push {
+    height: 60px;
 }
 
 .error {
